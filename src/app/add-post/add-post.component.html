@@ -1,0 +1,14 @@
+<!-- add-post.component.html -->
+<form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+    <label>Title:</label>
+    <input type="text" name="title" ngModel required>
+  
+    <label>Content:</label>
+    <textarea name="content" ngModel required></textarea>
+  
+    <label>Author:</label>
+    <input type="text" name="author" ngModel required>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
