@@ -1,5 +1,5 @@
 // navbar.component.ts
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PostService } from '../service/post.service';
 
 @Component({
@@ -8,6 +8,18 @@ import { PostService } from '../service/post.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Output() toggleSidebarEvent = new EventEmitter<void>();
+  @Output() searchEvent = new EventEmitter<string>();
+
+  searchQuery: string = '';
+
+  searchPosts() {
+    this.searchEvent.emit(this.searchQuery);
+  }
+
+  toggleSidebar() {
+    this.toggleSidebarEvent.emit();
+  }
 
   constructor(private postService: PostService) {}
 

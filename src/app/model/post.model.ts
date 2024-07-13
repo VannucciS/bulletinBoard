@@ -5,5 +5,6 @@ export interface Post {
     content: string;
     author: string;
     createdAt: Date;
+    imageUrl?: string; // Add this line
   }
   

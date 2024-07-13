@@ -1,6 +1,7 @@
 <!-- navbar.component.html -->
 <nav>
-    <button (click)="addPost()">Add Post</button>
-    <button (click)="deletePost()">Delete Post</button>
-  </nav>
-  
+  <button (click)="toggleSidebar()">Toggle Add Post</button>
+  <button (click)="deletePost()">Delete Post</button>
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Search by title" class="form-control">
+  <button (click)="searchPosts()">Search</button>
+</nav>
