@@ -20,6 +20,7 @@ export class NavbarComponent {
   toggleSidebar() {
     this.toggleSidebarEvent.emit();
   }
+  logout(){}
 
   constructor(private postService: PostService) {}
 

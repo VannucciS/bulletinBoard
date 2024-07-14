@@ -1,0 +1,22 @@
+/* styles.css */
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 300px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 10px;
+  }
+  

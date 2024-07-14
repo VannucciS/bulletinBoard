@@ -7,13 +7,21 @@ import { PostListComponent } from './post-list/post-list.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
     AddPostComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    HomeComponent,
+    RegistrationComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
