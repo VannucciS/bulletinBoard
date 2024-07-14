@@ -16,6 +16,7 @@ export class RegistrationComponent {
   }
 
   registerUser(){
+    alert('Your registration will be analyzed and the authorization to access the site will be send by email.');
     this.router.navigate(['/login']);
   }
 

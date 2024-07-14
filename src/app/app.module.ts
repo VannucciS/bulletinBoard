@@ -15,6 +15,7 @@ import { PostsToApproveComponent } from './admin/posts-to-approve/posts-to-appro
 import { UsersToApproveComponent } from './admin/users-to-approve/users-to-approve.component';
 import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
     FormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

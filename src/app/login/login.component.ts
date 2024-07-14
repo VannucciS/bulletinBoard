@@ -17,7 +17,7 @@ export class LoginComponent {
   onSubmit() {
     // Check if username or password fields are empty
     if (!this.username.trim() || !this.password.trim()) {
-      console.error('Username and password are required');
+      alert('Username and password are required');
       // Optionally, display an error message to the user here
       return; // Prevent form submission
     }
