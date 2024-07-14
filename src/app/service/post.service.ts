@@ -8,8 +8,8 @@ import { Post } from '../model/post.model';
 })
 export class PostService {
   private posts: Post[] = [
-    { id: 1, title: 'First Post', content: 'This is the first post.', author: 'Alice', createdAt: new Date('2024-07-01') },
-    { id: 2, title: 'Second Post', content: 'This is the second post.', author: 'Bob', createdAt: new Date('2024-07-02') },
+    { id: 1, title: 'First Post', content: 'This is the first post.', author: 'Alice', createdAt: new Date('2024-07-01'), status: 'approved' },
+    { id: 2, title: 'Second Post', content: 'This is the second post.', author: 'Bob', createdAt: new Date('2024-07-02'), status: 'approved' },
     // Add more mock posts as needed
   ];
 
@@ -25,5 +25,18 @@ export class PostService {
 
   deleteLastPost() {
     this.posts.pop();
+  }
+
+  getPostsToApprove(): Observable<any[]> {
+    return of(this.posts);
+  }
+
+  approvePost(postId: number): void {
+    this.posts = this.posts.map(post => {
+      if (post.id === postId) {
+        return { ...post, status: 'approved' };
+      }
+      return post;
+    });
   }
 }

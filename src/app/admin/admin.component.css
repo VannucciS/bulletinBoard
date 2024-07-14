@@ -1,0 +1,15 @@
+.components-container {
+    display: flex;
+    justify-content: space-between; /* This will place space between the two components */
+}
+
+.user-approval, .post-approval, .post-list, .title{
+    flex: 1; /* This makes both divs take up equal space */
+    padding: 10px; /* Adds some space inside each div */
+}
+.title{
+    text-align: center; /* Centers the text */
+    font-size: 1.5em; /* Increases the font size */
+    font-weight: bold; /* Makes the text bold */
+    margin-bottom: 10px; /* Adds some space below the text */
+}

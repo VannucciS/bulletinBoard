@@ -8,6 +8,7 @@ import { AdminRoleGuard } from './service/admin-role-guard.service';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'home', component: HomeComponent},
   {path: 'register', component: RegistrationComponent},
   {path: 'admin', component: AdminComponent}

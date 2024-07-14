@@ -11,6 +11,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AdminComponent } from './admin/admin.component';
+import { PostsToApproveComponent } from './admin/posts-to-approve/posts-to-approve.component';
+import { UsersToApproveComponent } from './admin/users-to-approve/users-to-approve.component';
+import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     HomeComponent,
     RegistrationComponent,
-    AdminComponent
+    AdminComponent,
+    PostsToApproveComponent,
+    UsersToApproveComponent,
+    NavbarAdminComponent
   ],
   imports: [
     BrowserModule,

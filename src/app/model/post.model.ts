@@ -6,5 +6,6 @@ export interface Post {
     author: string;
     createdAt: Date;
     imageUrl?: string; 
+    status: string;
   }
   

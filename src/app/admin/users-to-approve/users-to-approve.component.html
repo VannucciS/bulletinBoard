@@ -1,0 +1,10 @@
+<div class="users-to-approve">
+  <h2>Users Pending Approval</h2>
+  <ul>
+	<li *ngFor="let user of users">
+	  {{ user.name }}
+	  <button (click)="approveUser(user.id)">Approve</button>
+	  <button (click)="rejectUser(user.id)">Reject</button>
+	</li>
+  </ul>
+</div>
