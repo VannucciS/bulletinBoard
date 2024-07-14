@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { PostService } from '../../service/post.service';
 import { stat } from 'node:fs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-admin',
@@ -21,9 +22,11 @@ export class NavbarAdminComponent {
   toggleSidebar() {
     this.toggleSidebarEvent.emit();
   }
-  logout(){}
+  logout(){
+    this.router.navigate(['/login']);
+  }
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private router: Router) {}
 
   addPost() {
     const newPost = {

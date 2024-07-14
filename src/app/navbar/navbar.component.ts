@@ -1,6 +1,7 @@
 // navbar.component.ts
 import { Component, EventEmitter, Output } from '@angular/core';
 import { PostService } from '../service/post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -20,9 +21,11 @@ export class NavbarComponent {
   toggleSidebar() {
     this.toggleSidebarEvent.emit();
   }
-  logout(){}
+  logout(){
+    this.router.navigate(['/login']);
+  }
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private router: Router) {}
 
   addPost() {
     const newPost = {
