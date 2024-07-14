@@ -29,7 +29,8 @@ export class NavbarComponent {
       title: 'New Post',
       content: 'This is a new post.',
       author: 'Admin',
-      createdAt: new Date()
+      createdAt: new Date(),
+      status: 'approved'
     };
     this.postService.addPost(newPost).subscribe();
   }

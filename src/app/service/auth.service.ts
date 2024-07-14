@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   // This example uses localStorage for simplicity. In a real application, you might use a more secure method.
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   // Simulate a login by storing user info
   login(username: string, password: string): boolean {
@@ -31,5 +32,7 @@ export class AuthService {
   // Logout the user
   logout(): void {
     localStorage.removeItem('user');
+    // Redirect to login or home page
+    this.router.navigate(['/login']);
   }
 }

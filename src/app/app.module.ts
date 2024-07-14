@@ -14,6 +14,7 @@ import { AdminComponent } from './admin/admin.component';
 import { PostsToApproveComponent } from './admin/posts-to-approve/posts-to-approve.component';
 import { UsersToApproveComponent } from './admin/users-to-approve/users-to-approve.component';
 import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.componen
     AdminComponent,
     PostsToApproveComponent,
     UsersToApproveComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,

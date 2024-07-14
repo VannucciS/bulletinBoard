@@ -15,13 +15,27 @@ export class LoginComponent {
   constructor(private loginService: LoginService, private router: Router) {}
 
   onSubmit() {
+    // Check if username or password fields are empty
+    if (!this.username.trim() || !this.password.trim()) {
+      console.error('Username and password are required');
+      // Optionally, display an error message to the user here
+      return; // Prevent form submission
+    }
     this.loginService.login(this.username, this.password).subscribe(result => {
-      console.log(result);
-      // Handle login success
-      this.router.navigate(['/home']);
+      console.log( "result role login ", result);
+      // Check user role and redirect accordingly
+      if (result.role === 'admin') {
+        this.router.navigate(['/admin']); // Redirect to AdminComponent
+      } else if (result.role === 'user') {
+        this.router.navigate(['/home']); // Redirect to UserComponent
+      } else {
+        this.router.navigate(['/unauthorized']); // Redirect to an UnauthorizedComponent or similar
+      }
+      // Inside onSubmit() method after successful login
+      this.loginService.storeUserRole(result.role);
     }, error => {
       console.error(error);
-      // Handle login error
+      // Optionally, handle login error, e.g., show an error message
     });
   }
 }

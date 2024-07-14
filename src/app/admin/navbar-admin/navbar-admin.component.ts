@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { PostService } from '../../service/post.service';
+import { stat } from 'node:fs';
 
 @Component({
   selector: 'app-navbar-admin',
@@ -29,7 +30,8 @@ export class NavbarAdminComponent {
       title: 'New Post',
       content: 'This is a new post.',
       author: 'Admin',
-      createdAt: new Date()
+      createdAt: new Date(), 
+      status: 'approved',
     };
     this.postService.addPost(newPost).subscribe();
   }
