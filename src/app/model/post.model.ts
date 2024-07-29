@@ -4,6 +4,7 @@ export interface Post {
     title: string;
     content: string;
     author: string;
+    genre?: string;
     createdAt: Date;
     imageUrl?: string; 
     status: string;

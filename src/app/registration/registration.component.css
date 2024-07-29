@@ -1,0 +1,28 @@
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height to center vertically */
+}
+
+mat-card {
+  width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+button {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 16px;
+}

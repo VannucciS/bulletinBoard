@@ -10,6 +10,7 @@ export class PostService {
   private posts: Post[] = [
     { id: 1, title: 'First Post', content: 'This is the first post.', author: 'Alice', createdAt: new Date('2024-07-01'), status: 'approved' },
     { id: 2, title: 'Second Post', content: 'This is the second post.', author: 'Bob', createdAt: new Date('2024-07-02'), status: 'approved' },
+    { id: 3, title: 'Third Post', content: 'This is the Third post.', author: 'Tom', createdAt: new Date('2024-07-02'), status: 'pending' },
     // Add more mock posts as needed
   ];
 
@@ -28,7 +29,7 @@ export class PostService {
   }
 
   getPostsToApprove(): Observable<any[]> {
-    return of(this.posts);
+    return of(this.posts.filter(post => post.status === 'pending'));
   }
 
   approvePost(postId: number): void {

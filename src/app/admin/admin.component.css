@@ -1,6 +1,7 @@
 .components-container {
     display: flex;
     justify-content: space-between; /* This will place space between the two components */
+    padding: 16px; /* Adds some space around the components */
 }
 
 .user-approval, .post-approval, .post-list, .title{
@@ -12,4 +13,15 @@
     font-size: 1.5em; /* Increases the font size */
     font-weight: bold; /* Makes the text bold */
     margin-bottom: 10px; /* Adds some space below the text */
+}
+mat-toolbar{
+    margin-bottom: 16px; /* Adds some space below the toolbar */
+}
+
+mat-card{
+    height: 100%; /* Makes the card take up the full height */
+}
+
+mat-card-title{
+    text-align: center; /* Centers the text */
 }

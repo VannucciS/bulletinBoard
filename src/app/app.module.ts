@@ -16,6 +16,17 @@ import { UsersToApproveComponent } from './admin/users-to-approve/users-to-appro
 import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatGridList } from '@angular/material/grid-list';
+import { MatGridTile } from '@angular/material/grid-list';
+import { MatCardContent } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -34,8 +45,18 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatCardModule, 
+    MatInputModule, 
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatToolbar,
+    MatGridList,
+    MatGridTile,
+    MatCardContent
   ],
   providers: [
     provideClientHydration(),

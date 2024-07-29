@@ -24,7 +24,7 @@ export class AddPostComponent {
   onSubmit(form: NgForm) {
     const { title, content, author } = form.value;
     const createdAt = new Date();
-    const newPost: Post = { title, content, author, createdAt, status};
+    const newPost: Post = { title, content, author, createdAt, status: 'pending' };
 
     if (this.selectedFile) {
       const reader = new FileReader();

@@ -9,7 +9,11 @@ export class RoleGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot): boolean {
     const expectedRole = route.data['expectedRole'];
-    const currentRole = localStorage.getItem('userRole');
+    let currentRole: string | null = null;
+
+    if (typeof localStorage !== 'undefined'){
+      currentRole = localStorage.getItem('userRole');
+    }
 
     if (currentRole !== expectedRole) {
       this.router.navigate(['/unauthorized']);
