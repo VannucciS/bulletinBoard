@@ -1,0 +1,19 @@
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 16px;
+}

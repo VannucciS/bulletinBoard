@@ -25,3 +25,14 @@ mat-card{
 mat-card-title{
     text-align: center; /* Centers the text */
 }
+
+.title-left {
+    text-align: left; /* Aligns the text to the left */
+}
+
+/* admin.component.css */
+.main-title h1 {
+  font-size: 2.5em; /* Adjust the size as needed */
+  font-weight: bold; /* Optional: Make the text bold */
+  padding:  20px;
+}

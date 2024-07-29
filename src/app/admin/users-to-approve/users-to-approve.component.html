@@ -1,10 +1,13 @@
+<!-- users-to-approve.component.html -->
 <div class="users-to-approve">
   <h2>Users Pending Approval</h2>
-  <ul>
-	<li *ngFor="let user of users">
-	  {{ user.name }}
-	  <button (click)="approveUser(user.id)">Approve</button>
-	  <button (click)="rejectUser(user.id)">Reject</button>
-	</li>
-  </ul>
+  <div *ngFor="let user of users" class="user-card">
+	<mat-card>
+	  <mat-card-title>{{ user.name }}</mat-card-title>
+	  <mat-card-actions>
+		<button mat-raised-button color="primary" (click)="approveUser(user.id)">Approve</button>
+		<button mat-raised-button color="warn" (click)="rejectUser(user.id)">Reject</button>
+	  </mat-card-actions>
+	</mat-card>
+  </div>
 </div>

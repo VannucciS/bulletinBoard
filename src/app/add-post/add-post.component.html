@@ -1,22 +1,27 @@
 <!-- add-post.component.html -->
-<form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
-  <div>
-    <label>Title:</label>
-    <input type="text" name="title" ngModel required class="form-control">
-  </div>
-  <div>
-    <label>Content:</label>
-    <textarea name="content" ngModel required class="form-control"></textarea>
-  </div>
-  <div>
-    <label>Author:</label>
-    <input type="text" name="author" ngModel required class="form-control">
-  </div>
-  <div>
-    <label>Image:</label>
-    <input type="file" (change)="onFileSelected($event)" class="form-control">
-  </div>
-  <div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
+ <mat-card>
+  <mat-card-title>Add New Post</mat-card-title>
+    <mat-card-content>
+    <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+      <mat-form-field appearance="fill">
+        <mat-label>Title:</mat-label>
+        <input matInput type="text" name="title" ngModel required class="form-control">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Content:</mat-label>
+        <textarea matInput name="content" ngModel required class="form-control"></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Author:</mat-label>
+        <input matInput type="text" name="author" ngModel required class="form-control">
+      </mat-form-field>
+      <div>
+        <label>Image:</label>
+        <input  type="file" (change)="onFileSelected($event)" class="form-control">
+      </div>
+      <div>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

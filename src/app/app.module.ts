@@ -26,6 +26,9 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MatGridList } from '@angular/material/grid-list';
 import { MatGridTile } from '@angular/material/grid-list';
 import { MatCardContent } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatList } from '@angular/material/list';
+import { MatListItem } from '@angular/material/list';
 
 
 @NgModule({
@@ -48,15 +51,18 @@ import { MatCardContent } from '@angular/material/card';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    MatCardModule, 
-    MatInputModule, 
+    MatCardModule,
+    MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
     MatSlideToggleModule,
     MatToolbar,
     MatGridList,
     MatGridTile,
-    MatCardContent
+    MatCardContent,
+    MatIconModule,
+    MatList,
+    MatListItem
   ],
   providers: [
     provideClientHydration(),

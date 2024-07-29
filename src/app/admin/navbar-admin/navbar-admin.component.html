@@ -1,8 +1,13 @@
 <!-- navbar.component.html -->
-<nav>
-    <button (click)="logout()">Logout</button>
-    <button (click)="deletePost()">Delete Post</button>
-    <input type="text" [(ngModel)]="searchQuery" placeholder="Search by title" class="form-control">
-    <button (click)="searchPosts()">Search</button>
-  </nav>
-  
+<mat-toolbar color="primary">
+  <button mat-button (click)="logout()">Logout</button>
+  <button mat-button (click)="deletePost()">Delete Post</button>
+  <span class="toolbar-spacer"></span>
+  <mat-form-field class="search-field" appearance="outline">
+    <mat-label>Search by title</mat-label>
+    <input matInput type="text" [(ngModel)]="searchQuery">
+  </mat-form-field>
+  <button mat-icon-button (click)="searchPosts()">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-toolbar>

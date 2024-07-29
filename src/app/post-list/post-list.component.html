@@ -1,10 +1,16 @@
 <!-- post-list.component.html -->
-<ul>
+<ul class="post-list">
   <li *ngFor="let post of posts">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content }}</p>
-    <p>Author: {{ post.author }}</p>
-    <p>Posted at: {{ post.createdAt | date }}</p>
-    <img *ngIf="post.imageUrl" [src]="post.imageUrl" alt="Post Image" style="max-width: 50%; height: auto;">
+    <mat-card class="post-card">
+      <mat-card-header>
+        <mat-card-title>{{ post.title }}</mat-card-title>
+        <mat-card-subtitle>Author: {{ post.author }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+        <p>Posted at: {{ post.createdAt | date }}</p>
+        <img *ngIf="post.imageUrl" [src]="post.imageUrl" alt="Post Image" class="post-image">
+      </mat-card-content>
+    </mat-card>
   </li>
 </ul>

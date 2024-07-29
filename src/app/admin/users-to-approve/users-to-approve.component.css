@@ -1,0 +1,13 @@
+/* users-to-approve.component.css */
+.users-to-approve {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-card {
+  margin-bottom: 16px;
+}
+
+mat-card {
+  padding: 16px;
+}

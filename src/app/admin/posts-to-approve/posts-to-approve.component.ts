@@ -31,4 +31,9 @@ export class PostsToApproveComponent implements OnInit {
     });
     return of({ success: true }); // Simulate an API call response
   }
+
+  rejectPost(postId: number): Observable<any> {
+    this.posts = this.posts.filter(post => post.id !== postId);
+    return of({ success: true }); // Simulate an API call response
+  }
 }
