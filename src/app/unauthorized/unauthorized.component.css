@@ -1,0 +1,32 @@
+/* Common styles from your application */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Example font */
+  background-color: #f0f2f5; /* Example background color */
+}
+
+.unauthorized-container {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #e74c3c; /* Example color for unauthorized message */
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #666;
+}
